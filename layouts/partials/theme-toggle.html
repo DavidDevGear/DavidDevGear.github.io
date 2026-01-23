@@ -1,0 +1,72 @@
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<style>
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 2px solid var(--neon-blue);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  margin-left: 15px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
+}
+</style>
+
+<script>
+// Simple theme toggle - works immediately
+(function() {
+  console.log('Theme toggle script loading...');
+  
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) {
+    console.error('Theme toggle button not found!');
+    return;
+  }
+  
+  const icon = toggle.querySelector('.theme-icon');
+  
+  // Set initial theme
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', initialTheme);
+  icon.textContent = initialTheme === 'dark' ? '🌙' : '☀️';
+  
+  console.log('Initial theme set to:', initialTheme);
+  
+  // Toggle function
+  toggle.addEventListener('click', function() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    console.log('Switching theme from', currentTheme, 'to', newTheme);
+    
+    // Update theme
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    icon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    
+    // Add visual feedback
+    toggle.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      toggle.style.transform = 'scale(1)';
+    }, 150);
+  });
+  
+  console.log('Theme toggle initialized successfully');
+})();
+</script>

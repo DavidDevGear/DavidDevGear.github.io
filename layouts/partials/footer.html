@@ -1,0 +1,39 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="text-gradient">{{ .Site.Title }}</h3>
+                <p>Hardware reviews from a game developer's perspective</p>
+            </div>
+            <div class="footer-links">
+                <a href="/about/">About</a>
+                <a href="/disclosure/">Disclosure</a>
+                <a href="/categories/">Categories</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+                <p class="footer-note">As an Amazon Associate I earn from qualifying purchases.</p>
+            </div>
+            <div class="social-links" style="margin 1.5rem 0;">
+                {{ range .Site.Params.social }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+                style="display: inline-block; margin: 0 8px; font-size: 1.5em;"
+                title="{{ .name }}">
+                {{ .icon }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Simple JavaScript includes -->
+<script src="/js/theme.js"></script>
+<script src="/js/shortcodes.js"></script>
+
+<!-- Initialize scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Footer scripts loaded');
+});
+</script>

@@ -1,0 +1,57 @@
+baseURL = "https://DavidDevGear.github.io/"
+title = "Game Dev Gear Reviews"
+languageCode = "en-us"
+
+# Disable theme - we'll use custom layouts
+theme = ""
+
+# Allow raw HTML
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Suppress warnings
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[params]
+  defaultTheme = "dark"
+  description = "Gaming hardware reviews from a game developer's perspective"
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "disclosure"
+  name = "Disclosure"
+  url = "/disclosure/"
+  weight = 30
+
+[[params.social]]
+  name = "twitter"
+  url = "https://twitter.com/DvidDaDev"
+  icon = "🐦"
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/DavidDevGear"
+  icon = "💻"
+
+[[params.social]]
+  name = "itch.io"
+  url = "https://sovereigntydigital.itch.io"
+  icon = "🎮"
+
+
+[params.amazon]
+  tag = "dviddadev2109-20"
+  region = "us" 

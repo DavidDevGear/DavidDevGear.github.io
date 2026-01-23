@@ -1,0 +1,31 @@
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:description" content="{{ .Description | default .Summary }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description | default .Summary }}">
+
+<!-- Schema.org markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "{{ .Title }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "David"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Game Dev Gear Reviews"
+  }
+}
+</script>

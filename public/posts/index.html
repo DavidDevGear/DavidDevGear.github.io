@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=37707&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts | Game Dev Gear Reviews</title>
+    
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/shortcodes.css">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    
+    <meta name="description" content="Gaming hardware reviews from a game developer&#39;s perspective">
+    <meta name="theme-color" content="#8B0000">
+    
+    <style>
+     
+    :root {
+        --blood-red: #8B0000;
+        --crimson: #DC143C;
+    }
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: #0A0A0A;
+        color: #FFFFFF;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+    [data-theme="light"] body {
+        background: #FFFFFF;
+        color: #212529;
+    }
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="site-title">
+                    🎮 Game Dev Gear Reviews
+                </a>
+                <button id="theme-toggle" class="fade-in" aria-label="Toggle theme" title="Toggle light/dark mode">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="container" style="padding: 2rem 0;">
+        <div class="fade-in">
+            
+    
+
+        </div>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="margin-top: 0;">
+                    <span style="background: linear-gradient(135deg, #8B0000, #DC143C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        Game Dev Gear Reviews
+                    </span>
+                </h3>
+                <p>Hardware reviews from a game developer's perspective</p>
+                <div style="margin: 1.5rem 0;">
+                    <a href="/" style="margin: 0 10px;">Home</a>
+                    <a href="/about/" style="margin: 0 10px;">About</a>
+                    <a href="/disclosure/" style="margin: 0 10px;">Disclosure</a>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    &copy; 2026 Game Dev Gear Reviews. All rights reserved.<br>
+                    As an Amazon Associate I earn from qualifying purchases.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🎮 Game Dev Gear - Enhanced version loaded');
+        
+        
+        const toggle = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        
+        if (!toggle || !icon) {
+            console.error('Theme toggle elements not found');
+            return;
+        }
+        
+        
+        function initTheme() {
+            const savedTheme = localStorage.getItem('gdg-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+            
+            document.documentElement.setAttribute('data-theme', initialTheme);
+            updateThemeIcon(initialTheme);
+            console.log(`Theme initialized: ${initialTheme}`);
+        }
+        
+        
+        function updateThemeIcon(theme) {
+            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+            toggle.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+            
+            
+            toggle.classList.add('pulse');
+            setTimeout(() => toggle.classList.remove('pulse'), 300);
+        }
+        
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('gdg-theme', newTheme);
+            updateThemeIcon(newTheme);
+            
+            
+            toggle.style.transform = 'scale(0.95) rotate(5deg)';
+            setTimeout(() => {
+                toggle.style.transform = 'scale(1) rotate(0deg)';
+            }, 200);
+            
+            console.log(`Theme changed to: ${newTheme}`);
+        }
+        
+        
+        initTheme();
+        toggle.addEventListener('click', toggleTheme);
+        
+        
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            statNumbers.forEach((stat, index) => {
+                const target = parseInt(stat.getAttribute('data-target')) || 0;
+                if (target > 0) {
+                    let current = 0;
+                    const increment = target / 40; 
+                    
+                    
+                    stat.style.opacity = '0.5';
+                    stat.style.transform = 'scale(0.8)';
+                    
+                    setTimeout(() => {
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                                
+                                
+                                stat.style.opacity = '1';
+                                stat.style.transform = 'scale(1.05)';
+                                setTimeout(() => {
+                                    stat.style.transform = 'scale(1)';
+                                }, 150);
+                            }
+                            stat.textContent = Math.floor(current);
+                        }, 20);
+                        
+                        stat.style.opacity = '1';
+                        stat.style.transform = 'scale(1)';
+                    }, index * 100); 
+                }
+            });
+        }
+        
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        
+        const statContainers = document.querySelectorAll('.stats-grid');
+        statContainers.forEach(container => observer.observe(container));
+        
+        
+        const notifyBtn = document.getElementById('notify-btn');
+        if (notifyBtn) {
+            notifyBtn.addEventListener('click', function() {
+                alert('🎮 Thank you for your interest! First review coming soon.\n\nI\'ll be covering:\n• Best budget gaming mice\n• Gaming laptops for Godot dev\n• Studio headphones\n• Mechanical keyboards');
+                
+                
+                this.style.transform = 'scale(0.95)';
+                this.style.opacity = '0.8';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.style.opacity = '1';
+                }, 150);
+            });
+        }
+        
+        
+        const style = document.createElement('style');
+        style.textContent = `
+            .pulse {
+                animation: pulse 0.3s ease;
+            }
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    });
+    
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('gdg-theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        }
+    });
+    </script>
+</body>
+</html>

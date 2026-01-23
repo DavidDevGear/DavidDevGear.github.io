@@ -1,0 +1,43 @@
+<!-- Footer custom JS -->
+<script>
+// Debug: Check if custom CSS loaded
+console.log('Footer custom partial loaded');
+console.log('Neon blue CSS variable:', getComputedStyle(document.body).getPropertyValue('--neon-blue'));
+
+// Re-initialize stats counters in case they missed earlier
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Footer: DOM loaded');
+  
+  // Initialize stats counters
+  const containers = document.querySelectorAll('.stats-container');
+  containers.forEach(container => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('Footer: Animating stats counter');
+          const numbers = container.querySelectorAll('.stat-number');
+          
+          numbers.forEach(num => {
+            const target = parseInt(num.getAttribute('data-target')) || 100;
+            let current = 0;
+            const increment = target / 50;
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              num.textContent = Math.floor(current);
+            }, 30);
+          });
+          
+          observer.unobserve(container);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(container);
+  });
+});
+</script>

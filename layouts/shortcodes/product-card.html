@@ -1,0 +1,170 @@
+{{ $asin := .Get "asin" }}
+{{ $title := .Get "title" }}
+{{ $price := .Get "price" }}
+{{ $rating := .Get "rating" }}
+{{ $image := .Get "image" }}
+{{ $features := split (.Get "features") "|" }}
+
+<div class="dynamic-product-card" data-asin="{{ $asin }}">
+  <div class="product-card-header">
+    {{ if $image }}
+    <img src="{{ $image }}" alt="{{ $title }}" class="product-image">
+    {{ end }}
+    <h3>{{ $title }}</h3>
+    <div class="product-rating">
+      {{ range seq 5 }}
+        <span class="star {{ if le . (float $rating) }}filled{{ else }}empty{{ end }}">⭐</span>
+      {{ end }}
+      <span class="rating-text">{{ $rating }}/5</span>
+    </div>
+  </div>
+  
+  <div class="product-card-body">
+    <div class="price-tag glow">
+      {{ $price }}
+    </div>
+    
+    <ul class="feature-list">
+      {{ range $features }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+    
+    <a href="https://www.amazon.com/dp/{{ $asin }}/?tag=YOUR-TAG-HERE" 
+       class="btn-amazon pulse" target="_blank" rel="nofollow">
+      🛒 Check Price
+    </a>
+    
+    <div class="price-alert" data-asin="{{ $asin }}">
+      <small>Track price drops →</small>
+    </div>
+  </div>
+</div>
+
+<style>
+.dynamic-product-card {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 25px 0;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.dynamic-product-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-cyber);
+  border-radius: 17px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.dynamic-product-card:hover::before {
+  opacity: 1;
+}
+
+.dynamic-product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), var(--shadow-neon);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: var(--bg-secondary);
+}
+
+.product-rating {
+  margin: 10px 0;
+}
+
+.star.filled {
+  color: var(--amazon-gold);
+  text-shadow: 0 0 10px var(--amazon-gold);
+}
+
+.star.empty {
+  color: var(--text-secondary);
+  opacity: 0.3;
+}
+
+.rating-text {
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.price-tag.glow {
+  background: var(--gradient-sunset);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px var(--sunset-orange);
+  }
+  to {
+    box-shadow: 0 0 20px var(--cyber-pink);
+  }
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.feature-list li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.feature-list li::before {
+  content: '✓';
+  color: var(--matrix-green);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--matrix-green);
+}
+
+.btn-amazon.pulse {
+  animation: pulse 2s infinite;
+  margin-top: 15px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.price-alert {
+  margin-top: 10px;
+  cursor: pointer;
+  color: var(--neon-blue);
+  transition: color 0.3s;
+}
+
+.price-alert:hover {
+  color: var(--cyber-pink);
+}
+</style>

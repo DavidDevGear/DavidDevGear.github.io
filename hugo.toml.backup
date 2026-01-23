@@ -1,0 +1,74 @@
+baseURL = "https://DavidDevGear.github.io/"
+title = "Game Dev Gear Reviews"
+languageCode = "en-us"
+theme = "PaperMod"
+
+[params]
+defaultTheme = "light"
+description = "Gaming hardware reviews from a game developer's perspective"
+logo = "/images/logo.png"
+logoTitle = "Game Dev Gear Reviews"
+themeColor = "#3498db"
+displayFullLangName = false
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+
+[params.assets]
+disableHLJS = false
+disableFingerprinting = false
+customCSS = ["css/custom.css"]
+
+[params.homeInfoParams]
+Title = "🎮 Game Dev Gear Reviews"
+Content = "Hardware reviews from a game developer's perspective"
+
+[params.profileMode]
+enabled = true
+title = "David"
+subtitle = "Game Developer & Reviewer"
+imageUrl = "/images/profile.png"
+imageWidth = 150
+imageHeight = 150
+imageTitle = "David - Game Developer"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/DavidDevGear"
+
+[[params.socialIcons]]
+name = "itch-io"
+url = "https://sovereigntydigital.itch.io/"
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 10
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 20
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 30
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params.assets]
+customCSS = ["css/custom.css", "css/shortcodes.css"]
+customJS = ["js/shortcodes.js"]

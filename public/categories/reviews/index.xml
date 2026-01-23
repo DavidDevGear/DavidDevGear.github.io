@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews on Game Dev Gear Reviews</title>
+    <link>http://localhost:37707/categories/reviews/</link>
+    <description>Recent content in Reviews on Game Dev Gear Reviews</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:37707/categories/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Budget Gaming Mice for Developers 2024</title>
+      <link>http://localhost:37707/posts/first-review/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:37707/posts/first-review/</guid>
+      <description>&lt;h2 id=&#34;why-mouse-choice-matters&#34;&gt;Why Mouse Choice Matters&lt;/h2&gt;&#xA;&lt;p&gt;As a game developer who spends hours in Godot, I&amp;rsquo;ve learned that a good mouse isn&amp;rsquo;t just about gaming - it&amp;rsquo;s crucial for productivity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;top-picks-based-on-reviews&#34;&gt;Top Picks Based on Reviews&lt;/h2&gt;&#xA;&lt;p&gt;After analyzing 1000+ customer reviews, here are my top budget picks:&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-logitech-g203&#34;&gt;1. Logitech G203&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Price:&lt;/strong&gt; $25-35&#xA;&lt;strong&gt;Rating:&lt;/strong&gt; 4.5/5 (12,000+ reviews)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Pros:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lightweight for long sessions&lt;/li&gt;&#xA;&lt;li&gt;Reliable for pixel-precise work&lt;/li&gt;&#xA;&lt;li&gt;Affordable&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cons:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Side buttons could be better&lt;/li&gt;&#xA;&lt;li&gt;Basic software&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-razer-deathadder-essential&#34;&gt;2. Razer DeathAdder Essential&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Price:&lt;/strong&gt; $30-40&#xA;&lt;strong&gt;Rating:&lt;/strong&gt; 4.3/5 (8,000+ reviews)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

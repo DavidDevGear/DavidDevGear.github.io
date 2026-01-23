@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+    <title>Asset Test</title>
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/shortcodes.css">
+</head>
+<body>
+    <h1>CSS/JS Asset Test</h1>
+    
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    
+    <h2>Stats Counter Test</h2>
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number" data-target="1000">0</div>
+            <div class="stat-label">Reviews Analyzed</div>
+        </div>
+    </div>
+    
+    <h2>Color Test</h2>
+    <div style="background: var(--neon-blue);" class="color-box">Neon Blue</div>
+    <div style="background: var(--electric-purple);" class="color-box">Electric Purple</div>
+    
+    <script src="/js/shortcodes.js"></script>
+    <script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<div class="stats-container">
+  <div class="stat-item">
+    <div class="stat-number" data-count="1000">0</div>
+    <div class="stat-label">Reviews Analyzed</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number" data-count="50">0</div>
+    <div class="stat-label">Products Compared</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number" data-count="100">0</div>
+    <div class="stat-label">Development Hours</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number" data-count="24">0</div>
+    <div class="stat-label">Update Frequency</div>
+  </div>
+</div>
+
+<style>
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+  padding: 30px;
+  background: var(--bg-card);
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.stats-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-cyber);
+  border-radius: 17px;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  background: var(--gradient-cyber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.stat-number');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.getAttribute('data-count'));
+        const suffix = counter.textContent.includes('%') ? '%' : '';
+        
+        let count = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+          count += increment;
+          if (count >= target) {
+            count = target;
+            clearInterval(timer);
+          }
+          counter.textContent = Math.floor(count) + suffix;
+        }, 20);
+        
+        observer.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>

@@ -1,0 +1,304 @@
+/* ===== DEEP RED & MONOCHROME THEME ===== */
+
+:root {
+  /* Primary Colors - Deep Red Theme */
+  --blood-red: #8B0000;
+  --crimson: #DC143C;
+  --ruby: #E0115F;
+  --burgundy: #800020;
+  --wine: #722F37;
+  
+  /* Monochrome Backgrounds */
+  --void-black: #0A0A0A;
+  --charcoal: #1A1A1A;
+  --slate: #2D2D2D;
+  --cloud: #F8F9FA;
+  --snow: #FFFFFF;
+  --smoke: #E9ECEF;
+  
+  /* Text */
+  --text-light: #F8F9FA;
+  --text-dark: #212529;
+  --text-muted: #6C757D;
+  
+  /* Accents */
+  --gold: #FFD700;
+  --silver: #C0C0C0;
+  --bronze: #CD7F32;
+  
+  /* Gradients */
+  --gradient-blood: linear-gradient(135deg, var(--blood-red) 0%, var(--burgundy) 100%);
+  --gradient-crimson: linear-gradient(135deg, var(--crimson) 0%, var(--ruby) 100%);
+  --gradient-charcoal: linear-gradient(135deg, var(--charcoal) 0%, var(--slate) 100%);
+}
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+  --bg-primary: var(--void-black);
+  --bg-secondary: var(--charcoal);
+  --bg-card: var(--slate);
+  --bg-alt: #1E1E1E;
+  --text-primary: var(--text-light);
+  --text-secondary: #ADB5BD;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: var(--snow);
+  --bg-secondary: var(--smoke);
+  --bg-card: var(--cloud);
+  --bg-alt: #F1F3F5;
+  --text-primary: var(--text-dark);
+  --text-secondary: var(--text-muted);
+  --border-color: #DEE2E6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: var(--gradient-blood);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--blood-red);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--crimson);
+}
+
+/* Links */
+a {
+  color: var(--crimson);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+
+a:hover {
+  color: var(--blood-red);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-crimson);
+  transition: width 0.3s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+.card-title {
+  color: var(--crimson);
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--gradient-blood);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-alt);
+}
+
+/* Amazon Affiliate Button */
+.btn-amazon {
+  background: linear-gradient(135deg, #FF9900, #FFAD33);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-amazon::before {
+  content: '🛒';
+}
+
+.btn-amazon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3);
+}
+
+/* Code Blocks */
+pre, code {
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  border-left: 3px solid var(--blood-red);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+th {
+  background: var(--gradient-charcoal);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover td {
+  background: rgba(139, 0, 0, 0.05);
+}
+
+/* Header */
+.site-header {
+  background: var(--bg-secondary);
+  border-bottom: 3px solid var(--blood-red);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 3px solid var(--blood-red);
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-gradient {
+  background: var(--gradient-blood);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.badge-red {
+  background: var(--gradient-crimson);
+  color: white;
+}
+
+.badge-grey {
+  background: var(--gradient-charcoal);
+  color: white;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}

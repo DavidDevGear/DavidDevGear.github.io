@@ -1,0 +1,58 @@
+<section class="featured-posts">
+  <h2>🔥 Featured Reviews</h2>
+  <div class="posts-grid">
+    {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+    <article class="post-card">
+      <div class="post-card-content">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description | default .Summary | truncate 100 }}</p>
+        <div class="post-meta">
+          <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          <span class="read-time">⏱️ {{ .ReadingTime }} min read</span>
+        </div>
+      </div>
+    </article>
+    {{ else }}
+    <p>No reviews yet. Check back soon!</p>
+    {{ end }}
+  </div>
+</section>
+
+<style>
+.featured-posts {
+  margin: 40px 0;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.post-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  transition: all 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+</style>

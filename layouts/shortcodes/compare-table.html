@@ -1,0 +1,211 @@
+{{ $products := .Get "products" }}
+{{ $features := .Get "features" }}
+
+<div class="comparison-container">
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          {{ range split $products "|" }}
+          <th>{{ . }}</th>
+          {{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $i, $feature := split $features "|" }}
+        <tr class="{{ if modBool $i 2 }}even{{ else }}odd{{ end }}">
+          <td class="feature-name">{{ $feature }}</td>
+          {{ range split $products "|" }}
+          <td class="feature-value" data-product="{{ . }}" data-feature="{{ $feature }}">
+            <div class="score" data-score="0"></div>
+          </td>
+          {{ end }}
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="comparison-result">
+    <h4>🏆 Best For:</h4>
+    <div id="winner-display">Select features to see winner</div>
+    <button onclick="calculateWinner()" class="btn-compare">Calculate Winner</button>
+  </div>
+</div>
+
+<style>
+.comparison-container {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  border: 2px solid var(--neon-blue);
+  box-shadow: var(--shadow-neon);
+}
+
+.comparison-table {
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th {
+  background: var(--gradient-cyber);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.comparison-table td {
+  padding: 12px;
+  border: 1px solid var(--bg-secondary);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.comparison-table tr.even {
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.comparison-table tr:hover td {
+  background: rgba(157, 78, 221, 0.1);
+}
+
+.feature-name {
+  font-weight: bold;
+  text-align: left;
+  color: var(--neon-blue);
+}
+
+.feature-value {
+  cursor: pointer;
+  position: relative;
+}
+
+.feature-value:hover::after {
+  content: 'Click to rate';
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark-space);
+  color: var(--neon-blue);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.score {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.score[data-score="1"] { background: #ff6b6b; }
+.score[data-score="2"] { background: #ffd166; }
+.score[data-score="3"] { background: #06d6a0; }
+.score[data-score="4"] { background: #118ab2; }
+.score[data-score="5"] { background: var(--matrix-green); }
+
+.comparison-result {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#winner-display {
+  margin: 15px 0;
+  padding: 15px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  font-size: 1.2em;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-compare {
+  background: var(--gradient-matrix);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-compare:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--matrix-green);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cells = document.querySelectorAll('.feature-value');
+  
+  cells.forEach(cell => {
+    let score = 0;
+    const scoreElement = cell.querySelector('.score');
+    
+    cell.addEventListener('click', function() {
+      score = (score % 5) + 1;
+      scoreElement.setAttribute('data-score', score);
+      scoreElement.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        scoreElement.style.transform = 'scale(1)';
+      }, 200);
+    });
+  });
+});
+
+function calculateWinner() {
+  const products = {};
+  const cells = document.querySelectorAll('.feature-value');
+  
+  cells.forEach(cell => {
+    const product = cell.getAttribute('data-product');
+    const score = parseInt(cell.querySelector('.score').getAttribute('data-score') || 0);
+    
+    if (!products[product]) products[product] = 0;
+    products[product] += score;
+  });
+  
+  let winner = '';
+  let maxScore = -1;
+  
+  for (const [product, score] of Object.entries(products)) {
+    if (score > maxScore) {
+      maxScore = score;
+      winner = product;
+    }
+  }
+  
+  const display = document.getElementById('winner-display');
+  if (winner && maxScore > 0) {
+    display.innerHTML = `
+      <div style="text-align: center;">
+        <div style="font-size: 1.5em; color: var(--matrix-green);">${winner}</div>
+        <div style="font-size: 0.9em; color: var(--text-secondary);">
+          Total Score: ${maxScore} points
+        </div>
+      </div>
+    `;
+  } else {
+    display.textContent = 'Rate features first!';
+  }
+}
+</script>
