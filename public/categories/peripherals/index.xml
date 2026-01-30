@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>peripherals on Dev Gear Reviews</title>
-    <link>http://localhost:42681/categories/peripherals/</link>
+    <link>https://DavidDevGear.github.io/categories/peripherals/</link>
     <description>Recent content in peripherals on Dev Gear Reviews</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:42681/categories/peripherals/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://DavidDevGear.github.io/categories/peripherals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Mechanical Keyboard</title>
-      <link>http://localhost:42681/reviews/keychron-k10-pro/</link>
+      <link>https://DavidDevGear.github.io/reviews/keychron-k10-pro/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42681/reviews/keychron-k10-pro/</guid>
+      <guid>https://DavidDevGear.github.io/reviews/keychron-k10-pro/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Keychron K10 Pro&lt;/strong&gt; is a full-size mechanical keyboard known for its &lt;strong&gt;hot-swappable switches, QMK/VIA programmability, and multi-device support&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hot-swappable switch support — swap switches without soldering&lt;/li&gt;&#xA;&lt;li&gt;Bluetooth + wired modes&lt;/li&gt;&#xA;&lt;li&gt;QMK/VIA customizable layouts&lt;/li&gt;&#xA;&lt;li&gt;1000 Hz polling rate and responsive typing feel&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;drawback&#34;&gt;Drawback&lt;/h2&gt;&#xA;&lt;p&gt;Some community feedback suggests &lt;strong&gt;occasional quality control issues and customer support limitations&lt;/strong&gt;, common in affordable custom keyboards.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;verdict&#34;&gt;Verdict&lt;/h2&gt;&#xA;&lt;p&gt;Excellent for development and gaming workflows if you value &lt;strong&gt;programmability and typing feel&lt;/strong&gt;, but expect to manage minor quirks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Classic Gaming Mouse</title>
-      <link>http://localhost:42681/reviews/logitech-g502-hero/</link>
+      <link>https://DavidDevGear.github.io/reviews/logitech-g502-hero/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42681/reviews/logitech-g502-hero/</guid>
+      <guid>https://DavidDevGear.github.io/reviews/logitech-g502-hero/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Logitech G502 HERO&lt;/strong&gt; is one of the most popular wired gaming mice of the last decade, known for its precision sensor, programmability, and ergonomic shape.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;design--ergonomics&#34;&gt;Design &amp;amp; Ergonomics&lt;/h2&gt;&#xA;&lt;p&gt;It’s built for &lt;strong&gt;right-handed users&lt;/strong&gt;, with a thumb rest and comfortable grip, making it suitable for long sessions — whether gaming or designing. The adjustable weights let you customize the feel for your hand and playstyle.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;&#xA;&lt;p&gt;The next-generation &lt;strong&gt;HERO sensor&lt;/strong&gt; delivers up to 25,600 DPI tracking with minimal smoothing or filtering, ensuring precise and responsive input — ideal for competitive gaming.&lt;/p&gt;</description>
     </item>
   </channel>

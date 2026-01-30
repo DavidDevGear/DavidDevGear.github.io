@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>audio on Dev Gear Reviews</title>
-    <link>http://localhost:42681/categories/audio/</link>
+    <link>https://DavidDevGear.github.io/categories/audio/</link>
     <description>Recent content in audio on Dev Gear Reviews</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:42681/categories/audio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://DavidDevGear.github.io/categories/audio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Budget Audio King</title>
-      <link>http://localhost:42681/reviews/kz-zsn-pro-x/</link>
+      <link>https://DavidDevGear.github.io/reviews/kz-zsn-pro-x/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:42681/reviews/kz-zsn-pro-x/</guid>
+      <guid>https://DavidDevGear.github.io/reviews/kz-zsn-pro-x/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;KZ ZSN Pro X&lt;/strong&gt; has built a reputation as one of the best &lt;strong&gt;budget IEMs&lt;/strong&gt; on Amazon. Drawing from thousands of user reviews and audio forums, this earphone consistently stands out for sound quality that far exceeds its price.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;sound-quality&#34;&gt;Sound Quality&lt;/h2&gt;&#xA;&lt;p&gt;Based on aggregated reviews:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bass:&lt;/strong&gt; Punchy and energetic, slightly boosted&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mids:&lt;/strong&gt; Clear vocals, good separation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Treble:&lt;/strong&gt; Bright and detailed, can be sharp at high volumes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;For gaming and casual listening, positional audio and clarity are praised, especially considering the price.&lt;/p&gt;</description>
     </item>
   </channel>
