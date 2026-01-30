@@ -3,7 +3,7 @@ title = "Dev Gear Reviews"
 languageCode = "en-us"
 
 # 🚫 NO THEME
-# theme = "PaperMod"
+theme = "PaperMod"
 
 [markup]
   [markup.goldmark]
