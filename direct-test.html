@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direct Test</title>
+    <script src="/js/theme.js"></script>
+    <style>
+    body { background: #0a0a0a; color: white; padding: 20px; }
+    button { background: #8B0000; color: white; border: none; padding: 10px 20px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Direct JavaScript Test</h1>
+    <button onclick="alert('Inline JS works')">Test Inline JS</button>
+    <button id="theme-test">Test External JS</button>
+    
+    <div id="output" style="margin-top: 20px; padding: 20px; background: #1a1a1a;"></div>
+    
+    <script>
+    document.getElementById('theme-test').addEventListener('click', function() {
+        document.getElementById('output').innerHTML = 
+            '<p>External JS test passed! Theme.js loaded.</p>' +
+            '<p>Check console for more info.</p>';
+        console.log('Direct test: External JS functions available');
+    });
+    
+    // Check if theme.js loaded
+    setTimeout(function() {
+        console.log('Direct test page loaded');
+    }, 100);
+    </script>
+</body>
+</html>

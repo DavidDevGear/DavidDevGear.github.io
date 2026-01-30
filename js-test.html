@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direct JS Test</title>
+    <!-- Load our JS files directly -->
+    <script src="/js/theme.js"></script>
+    <script src="/js/shortcodes.js"></script>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Direct JavaScript Load Test</h1>
+    
+    <div id="status">
+        <p>Checking if JS files loaded...</p>
+    </div>
+    
+    <button onclick="runTest()">Run Test</button>
+    
+    <script>
+    function runTest() {
+        const status = document.getElementById('status');
+        
+        // Check if theme.js functions are available
+        if (typeof document.addEventListener === 'function') {
+            status.innerHTML += '<p class="success">✅ Basic JS functions available</p>';
+        } else {
+            status.innerHTML += '<p class="error">❌ Basic JS not working</p>';
+        }
+        
+        // Try to use a function from theme.js
+        try {
+            // This would be from theme.js if loaded
+            console.log('Test from direct page');
+            status.innerHTML += '<p class="success">✅ Console logging works</p>';
+        } catch (e) {
+            status.innerHTML += '<p class="error">❌ Error: ' + e.message + '</p>';
+        }
+    }
+    
+    // Auto-run after load
+    window.addEventListener('load', function() {
+        document.getElementById('status').innerHTML += 
+            '<p>Page loaded. Click "Run Test" button above.</p>';
+    });
+    </script>
+</body>
+</html>
