@@ -1,3 +1,16 @@
 {{ define "main" }}
-    {{ .Content }}
+
+  {{ partial "hero.html" . }}
+
+  <!-- NEW / UPDATED CATEGORIES -->
+  <section class="category-grid">
+    {{ range where .Site.Pages "Params.badge" "in" (slice "new" "updated") }}
+      {{ partial "category-card.html" . }}
+    {{ end }}
+  </section>
+
+  {{ partial "stats.html" . }}
+
+  {{ partial "difference.html" . }}
+
 {{ end }}

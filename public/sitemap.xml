@@ -2,81 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:37707/privacy/</loc>
-    <lastmod>2026-01-21T08:17:30+02:00</lastmod>
+    <loc>http://localhost:44897/reviews/kz-zsn-pro-x/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/about/</loc>
+    <loc>http://localhost:44897/categories/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/reviews/keychron-k10-pro/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/reviews/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/reviews/zephyrus-g14-vs-legion-5i/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/disclosure/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/audio/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/ergonomics/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/laptops/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/monitors/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/peripherals/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/categories/software/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/reviews/lg-ultragear-27-review/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/reviews/logitech-g502-hero/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:44897/about/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/disclosure/</loc>
+    <loc>http://localhost:44897/debug-js/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/categories/audio/</loc>
+    <loc>http://localhost:44897/test/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/categories/</loc>
+    <loc>http://localhost:44897/final-test/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/debug-js/</loc>
+    <loc>http://localhost:44897/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/categories/ergonomics/</loc>
+    <loc>http://localhost:44897/test-js/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/test/</loc>
+    <loc>http://localhost:44897/shortcode-test/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/final-test/</loc>
+    <loc>http://localhost:44897/test-simple/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/test-js/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/categories/laptops/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/categories/monitors/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/categories/peripherals/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/shortcode-test/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/test-simple/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/categories/software/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/posts/first-review/</loc>
+    <loc>http://localhost:44897/tags/</loc>
     <lastmod>2024-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:37707/tags/budget/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+    <loc>http://localhost:44897/contact/</loc>
   </url><url>
-    <loc>http://localhost:37707/tags/gaming/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
+    <loc>http://localhost:44897/categories/mice/</loc>
   </url><url>
-    <loc>http://localhost:37707/tags/mouse/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/posts/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/tags/productivity/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/categories/reviews/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/tags/</loc>
-    <lastmod>2024-01-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:37707/posts/first-review-best-gaming-mice-2026/</loc>
+    <loc>http://localhost:44897/credits/</loc>
   </url>
 </urlset>

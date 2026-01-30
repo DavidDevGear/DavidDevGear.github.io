@@ -1,241 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="{{ .Site.Params.defaultTheme | default "dark" }}">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/custom.css">
-    <link rel="stylesheet" href="/css/shortcodes.css">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Meta -->
-    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
-    <meta name="theme-color" content="#8B0000">
-    
-    <style>
-    /* Critical inline CSS for instant loading */
-    :root {
-        --blood-red: #8B0000;
-        --crimson: #DC143C;
-    }
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background: #0A0A0A;
-        color: #FFFFFF;
-        opacity: 0;
-        animation: fadeIn 0.5s ease forwards;
-    }
-    [data-theme="light"] body {
-        background: #FFFFFF;
-        color: #212529;
-    }
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-    </style>
+
+<style>
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+</style>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+  {{ if .IsHome }}
+    {{ .Site.Title }}
+  {{ else }}
+    {{ .Title }} | {{ .Site.Title }}
+  {{ end }}
+</title>
+
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ else }}
+  {{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}">
+  {{ end }}
+{{ end }}
+{{ partial "head.html" . }}
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Preload category images -->
+<link rel="preload" href="/images/categories/laptops.jpg" as="image">
+<link rel="preload" href="/images/categories/peripherals.jpg" as="image">
+<link rel="preload" href="/images/categories/monitors.jpg" as="image">
+<link rel="preload" href="/images/categories/audio.jpg" as="image">
+<link rel="preload" href="/images/categories/ergonomics.jpg" as="image">
+<link rel="preload" href="/images/categories/software.jpg" as="image">
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ "/css/site.css" | relURL }}">
+<link rel="stylesheet" href="{{ "/css/fixes.css" | relURL }}">
+
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="/" class="site-title">
-                    🎮 {{ .Site.Title }}
-                </a>
-                <button id="theme-toggle" class="fade-in" aria-label="Toggle theme" title="Toggle light/dark mode">
-                    <span id="theme-icon">🌙</span>
-                </button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="container" style="padding: 2rem 0;">
-        <div class="fade-in">
-            {{ block "main" . }}{{ end }}
-        </div>
-    </main>
+<header class="site-header">
+  <nav class="nav">
+    <a href="{{ "/" | relURL }}" class="nav-logo">
+      {{ .Site.Title }}
+    </a>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <h3 style="margin-top: 0;">
-                    <span style="background: linear-gradient(135deg, #8B0000, #DC143C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                        {{ .Site.Title }}
-                    </span>
-                </h3>
-                <p>Hardware reviews from a game developer's perspective</p>
-                <div style="margin: 1.5rem 0;">
-                    <a href="/" style="margin: 0 10px;">Home</a>
-                    <a href="/about/" style="margin: 0 10px;">About</a>
-                    <a href="/disclosure/" style="margin: 0 10px;">Disclosure</a>
-                </div>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                    &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.<br>
-                    As an Amazon Associate I earn from qualifying purchases.
-                </p>
-            </div>
-        </div>
-    </footer>
+    {{ if .Site.Menus.main }}
+    <ul class="nav-menu">
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </nav>
+</header>
 
-    <!-- JavaScript -->
-    <script>
-    // Enhanced theme toggle with better animations
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('🎮 Game Dev Gear - Enhanced version loaded');
-        
-        // Theme toggle
-        const toggle = document.getElementById('theme-toggle');
-        const icon = document.getElementById('theme-icon');
-        
-        if (!toggle || !icon) {
-            console.error('Theme toggle elements not found');
-            return;
-        }
-        
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('gdg-theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-            
-            document.documentElement.setAttribute('data-theme', initialTheme);
-            updateThemeIcon(initialTheme);
-            console.log(`Theme initialized: ${initialTheme}`);
-        }
-        
-        // Update icon
-        function updateThemeIcon(theme) {
-            icon.textContent = theme === 'dark' ? '🌙' : '☀️';
-            toggle.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
-            
-            // Add animation class
-            toggle.classList.add('pulse');
-            setTimeout(() => toggle.classList.remove('pulse'), 300);
-        }
-        
-        // Toggle theme
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('gdg-theme', newTheme);
-            updateThemeIcon(newTheme);
-            
-            // Enhanced button animation
-            toggle.style.transform = 'scale(0.95) rotate(5deg)';
-            setTimeout(() => {
-                toggle.style.transform = 'scale(1) rotate(0deg)';
-            }, 200);
-            
-            console.log(`Theme changed to: ${newTheme}`);
-        }
-        
-        // Initialize
-        initTheme();
-        toggle.addEventListener('click', toggleTheme);
-        
-        // Stats animation with enhanced effects
-        function animateStats() {
-            const statNumbers = document.querySelectorAll('.stat-number');
-            
-            statNumbers.forEach((stat, index) => {
-                const target = parseInt(stat.getAttribute('data-target')) || 0;
-                if (target > 0) {
-                    let current = 0;
-                    const increment = target / 40; // Faster animation
-                    
-                    // Add starting animation
-                    stat.style.opacity = '0.5';
-                    stat.style.transform = 'scale(0.8)';
-                    
-                    setTimeout(() => {
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                                
-                                // Final animation
-                                stat.style.opacity = '1';
-                                stat.style.transform = 'scale(1.05)';
-                                setTimeout(() => {
-                                    stat.style.transform = 'scale(1)';
-                                }, 150);
-                            }
-                            stat.textContent = Math.floor(current);
-                        }, 20);
-                        
-                        stat.style.opacity = '1';
-                        stat.style.transform = 'scale(1)';
-                    }, index * 100); // Staggered start
-                }
-            });
-        }
-        
-        // Animate stats when in viewport
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateStats();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        // Observe stat containers
-        const statContainers = document.querySelectorAll('.stats-grid');
-        statContainers.forEach(container => observer.observe(container));
-        
-        // Get Notified button
-        const notifyBtn = document.getElementById('notify-btn');
-        if (notifyBtn) {
-            notifyBtn.addEventListener('click', function() {
-                alert('🎮 Thank you for your interest! First review coming soon.\n\nI\'ll be covering:\n• Best budget gaming mice\n• Gaming laptops for Godot dev\n• Studio headphones\n• Mechanical keyboards');
-                
-                // Button animation
-                this.style.transform = 'scale(0.95)';
-                this.style.opacity = '0.8';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                    this.style.opacity = '1';
-                }, 150);
-            });
-        }
-        
-        // Add pulse animation class
-        const style = document.createElement('style');
-        style.textContent = `
-            .pulse {
-                animation: pulse 0.3s ease;
-            }
-            @keyframes pulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-                100% { transform: scale(1); }
-            }
-        `;
-        document.head.appendChild(style);
-    });
-    
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('gdg-theme')) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            const icon = document.getElementById('theme-icon');
-            if (icon) icon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        }
-    });
-    </script>
+<!-- MAIN: no wrapping here -->
+<main id="content">
+  {{ block "hero" . }}{{ end }}
+
+  <div class="content-wrap">
+    {{ block "main" . }}{{ end }}
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <p>
+    © {{ now.Format "2006" }} {{ .Site.Title }} ·
+    As an Amazon Associate I earn from qualifying purchases.
+<a href="{{ "/credits/" | relURL }}">Image Credits</a>
+
+  </p>
+</footer>
+
+<!-- Scripts -->
+<script>
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  if (!hero) return;
+  hero.style.backgroundPosition = `center ${window.scrollY * 0.25}px`;
+});
+</script>
+
+<script>
+const items = document.querySelectorAll('.diff-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+items.forEach(item => observer.observe(item));
+</script>
+<script src="/js/category-filter.js"></script>
+
+<script src="/js/stats.js"></script>
+
 </body>
 </html>

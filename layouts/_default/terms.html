@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<section class="categories-hero">
+  <h1>Categories</h1>
+  <p>Curated hardware and tools tested inside real game development workflows.</p>
+</section>
+
+<section class="category-grid">
+  {{ range .Pages }}
+    {{ partial "category-card.html" . }}
+  {{ end }}
+</section>
+
+{{ end }}

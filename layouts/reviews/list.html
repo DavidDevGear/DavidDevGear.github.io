@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<div class="content-wrap">
+
+  <section class="reviews-header">
+    <h1>Reviews</h1>
+    <p>In-depth, developer-focused reviews of gaming and productivity gear.</p>
+  </section>
+
+  <section class="reviews-list">
+    {{ range .Pages }}
+      <article class="review-card">
+
+        <header class="review-head">
+          <h2 class="review-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+
+          {{ with .Params.device_name }}
+            <div class="review-subtitle">{{ . }} Review</div>
+          {{ end }}
+        </header>
+
+        <div class="review-body">
+
+          {{ with .Params.featured_image }}
+            <div class="review-image">
+              <img src="{{ . }}" alt="{{ $.Title }}">
+            </div>
+          {{ end }}
+
+          <div class="review-info">
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ end }}
+
+            {{ with .Params.rating }}
+              <div class="review-rating">⭐ {{ . }} / 5</div>
+            {{ end }}
+          </div>
+
+        </div>
+
+      </article>
+    {{ end }}
+  </section>
+
+</div>
+
+{{ end }}

@@ -9,7 +9,7 @@ date: 2024-01-22
 This is embedded in header, not via shortcode.
 
 ### 2. Stats Counter
-{{< stats-fixed >}}
+
 
 ### 3. Simple Comparison Table
 {{< compare-simple >}}

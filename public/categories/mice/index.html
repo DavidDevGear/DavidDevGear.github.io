@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=44897&amp;path=livereload" data-no-instant defer></script>
+
+<style>
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+</style>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+  
+    Gaming Mice | Dev Gear Reviews
+  
+</title>
+
+
+  <meta name="description" content="Precision, sensors, ergonomics, and long-session comfort.">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z814E26YFM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z814E26YFM');
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+
+<link rel="preload" href="/images/categories/laptops.jpg" as="image">
+<link rel="preload" href="/images/categories/peripherals.jpg" as="image">
+<link rel="preload" href="/images/categories/monitors.jpg" as="image">
+<link rel="preload" href="/images/categories/audio.jpg" as="image">
+<link rel="preload" href="/images/categories/ergonomics.jpg" as="image">
+<link rel="preload" href="/images/categories/software.jpg" as="image">
+
+
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/fixes.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      Dev Gear Reviews
+    </a>
+
+    
+    <ul class="nav-menu">
+      
+        <li>
+          <a href="/">Home</a>
+        </li>
+      
+        <li>
+          <a href="/reviews/">Reviews</a>
+        </li>
+      
+        <li>
+          <a href="/categories/">Categories</a>
+        </li>
+      
+        <li>
+          <a href="/about/">About</a>
+        </li>
+      
+        <li>
+          <a href="/contact/">Contact</a>
+        </li>
+      
+        <li>
+          <a href="/disclosure/">Disclosure</a>
+        </li>
+      
+    </ul>
+    
+  </nav>
+</header>
+
+
+<main id="content">
+  
+
+  <div class="content-wrap">
+    
+
+
+<section class="categories-hero">
+  <h1>Categories</h1>
+  <p>Curated hardware and tools tested inside real game development workflows.</p>
+</section>
+
+
+<section class="category-grid">
+
+  
+
+  
+    <a href="/categories/audio/#reviews"
+       class="category-card audio">
+      <h3>Audio</h3>
+      <p>High-end audio gear for gaming and music.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+    <a href="/categories/ergonomics/#reviews"
+       class="category-card ergonomics">
+      <h3>Ergonomics</h3>
+      <p>Ergonomic setups for long sessions.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+    <a href="/categories/laptops/#reviews"
+       class="category-card laptops">
+      <h3>Laptops</h3>
+      <p>Portable high-performance gaming laptops.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+    <a href="/categories/monitors/#reviews"
+       class="category-card monitors">
+      <h3>Monitors</h3>
+      <p>Best monitors for color accuracy and refresh rate.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+    <a href="/categories/peripherals/#reviews"
+       class="category-card peripherals">
+      <h3>Peripherals</h3>
+      <p>Keyboards, mice, and other accessories.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+    <a href="/categories/software/#reviews"
+       class="category-card software">
+      <h3>Software</h3>
+      <p>Tools and software for game dev and streaming.</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  
+
+</section>
+
+
+<section id="reviews" class="reviews-list">
+
+  
+  
+    <p>No reviews found in this category yet.</p>
+  
+
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+  if (window.location.hash === '#reviews') {
+    const reviewsSection = document.getElementById('reviews');
+    if (reviewsSection) {
+      reviewsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+</script>
+
+
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <p>
+    © 2026 Dev Gear Reviews ·
+    As an Amazon Associate I earn from qualifying purchases.
+<a href="/credits/">Image Credits</a>
+
+  </p>
+</footer>
+
+
+<script>
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  if (!hero) return;
+  hero.style.backgroundPosition = `center ${window.scrollY * 0.25}px`;
+});
+</script>
+
+<script>
+const items = document.querySelectorAll('.diff-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+items.forEach(item => observer.observe(item));
+</script>
+<script src="/js/category-filter.js"></script>
+
+<script src="/js/stats.js"></script>
+
+</body>
+</html>

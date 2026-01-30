@@ -1,0 +1,44 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <div class="footer-link-column">
+        <span>Navigation</span>
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="footer-link">{{ .Name }}</a>
+        {{ end }}
+      </div>
+      
+      <div class="footer-link-column">
+        <span>Social</span>
+        {{ range .Site.Params.social }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" class="footer-link">
+          {{ .name }}
+        </a>
+        {{ end }}
+      </div>
+      
+      <div class="footer-link-column">
+        <span>Legal</span>
+        <a href="/disclosure/" class="footer-link">Affiliate Disclosure</a>
+        <a href="/privacy/" class="footer-link">Privacy Policy</a>
+        <a href="/terms/" class="footer-link">Terms</a>
+      </div>
+      
+      <div class="footer-link-column">
+        <span>Contact</span>
+        <a href="mailto:{{ .Site.Params.email }}" class="footer-link">{{ .Site.Params.email }}</a>
+        <div class="text-sm" style="color: var(--text-grey); margin-top: 10px;">
+          {{ .Site.Params.location }}
+        </div>
+      </div>
+    </div>
+    
+    <div class="affiliate-disclaimer">
+      <p><strong>Amazon Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This site contains affiliate links to products. I may receive a commission for purchases made through these links at no additional cost to you.</p>
+    </div>
+    
+    <div class="text-center mt-4" style="color: var(--text-grey);">
+      &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
+    </div>
+  </div>
+</footer>

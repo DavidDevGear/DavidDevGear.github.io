@@ -16,10 +16,14 @@ I'm a solo game developer who has published games on itch.io, Poki, and Crazy Ga
 - **Expertise:** Godot Engine, shader programming, game optimization
 - **Freelance:** Available for Godot development and consulting
 
+<br>
+
 ### Hardware Experience
-- **10+ years** building and testing gaming PCs
 - **Specialization:** Game development workstation optimization
 - **Focus:** What actually matters for development workflow
+
+<br>
+<br>
 
 ## Review Methodology
 
@@ -29,15 +33,25 @@ My reviews are based on:
 3. **Community consensus** from game dev forums
 4. **Professional reviews** from trusted tech sites
 
+
+<br>
+<br>
+
+
 ## Transparency Promise
 - I'll always disclose affiliate relationships
 - I'll provide both pros AND cons for every product
 - I'll show my research methodology
 - I'll recommend alternatives at different price points
 
+
+<br>
+<br>
+
+
 ## Connect
-- [My Games on itch.io](https://sovereigntydigital.itch.io/)
-- [GitHub](https://github.com/DavidDevGear)
+- [My Games on itch.io ↗](https://sovereigntydigital.itch.io/)
+- [GitHub ↗](https://github.com/DavidDevGear)
 - Email: daveadebayo@gmail.com
 
 <a href="/" style="display: inline-block; background: var(--bg-card); padding: 15px 30px; border-radius: 8px; margin: 20px 0;">← Back to Home</a>

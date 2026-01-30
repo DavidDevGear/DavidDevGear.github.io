@@ -1,6 +1,8 @@
 ---
 title: "peripherals"
-date: 2024-01-22
+date: 2026-01-22
+image: "/images/categories/peripherals.webp"
+badge: "updated"
 ---
 
 # peripherals Reviews

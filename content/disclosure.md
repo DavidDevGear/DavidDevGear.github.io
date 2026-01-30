@@ -1,6 +1,6 @@
 ---
 title: "Affiliate Disclosure"
-date: 2024-01-22
+date: 2026-01-22
 ---
 
 # Transparency & Disclosure
@@ -14,22 +14,31 @@ Game Dev Gear Reviews is a participant in the Amazon Services LLC Associates Pro
 - This comes at **no extra cost to you**
 - Commissions help support the site and allow me to continue providing detailed reviews
 
+<br>
+<br>
+
+
 ## Review Integrity Promise
 
 I believe in complete transparency. Here's my promise to you:
 
-### ✅ I Will Always:
+### I Will Always:
 - Disclose affiliate relationships clearly
 - Provide both pros AND cons for every product
 - Show my research methodology
 - Recommend alternatives at different price points
 - Update reviews when products change or new information emerges
 
-### ❌ I Will Never:
+<br>
+
+### I Will Never:
 - Recommend products I don't believe in
 - Hide negative aspects of products
 - Accept payment for positive reviews
 - Let affiliate relationships influence ratings
+
+<br>
+<br>
 
 ## My Review Methodology
 
@@ -41,6 +50,9 @@ Since I don't own every product I review, my analysis is based on:
 4. **Professional reviews** from trusted tech sites
 5. **Price history tracking** to identify good deals
 
+<br>
+<br>
+
 ## How to Support the Site
 
 1. **Use affiliate links** when making purchases (no cost to you)
@@ -48,10 +60,13 @@ Since I don't own every product I review, my analysis is based on:
 3. **Provide feedback** on my reviews via email or social media
 4. **Consider my freelance services** for Godot development
 
+<br>
+<br>
+
 ## Questions?
 
 If you have any questions about my disclosure or review process, please [contact me](/about/).
 
 ---
 
-*Last updated: January 2024*
+*Last updated: January 2026*

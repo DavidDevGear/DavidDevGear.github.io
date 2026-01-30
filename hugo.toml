@@ -1,57 +1,66 @@
 baseURL = "https://DavidDevGear.github.io/"
-title = "Game Dev Gear Reviews"
+title = "Dev Gear Reviews"
 languageCode = "en-us"
 
-# Disable theme - we'll use custom layouts
-theme = ""
+# 🚫 NO THEME
+# theme = "PaperMod"
 
-# Allow raw HTML
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
-# Suppress warnings
-ignoreLogs = ['warning-goldmark-raw-html']
+ignoreLogs = ["warning-goldmark-raw-html"]
 
 [params]
-  defaultTheme = "dark"
   description = "Gaming hardware reviews from a game developer's perspective"
+  email = "daveadebayo842@gmail.com"
 
 [[menu.main]]
-  identifier = "home"
   name = "Home"
   url = "/"
   weight = 10
 
 [[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
+  name = "Reviews"
+  url = "/reviews/"
   weight = 20
 
 [[menu.main]]
-  identifier = "disclosure"
-  name = "Disclosure"
-  url = "/disclosure/"
+  name = "Categories"
+  url = "/categories/"
   weight = 30
 
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 50
+
+[[menu.main]]
+  name = "Disclosure"
+  url = "/disclosure/"
+  weight = 60
+
 [[params.social]]
-  name = "twitter"
+  name = "Twitter↗"
   url = "https://twitter.com/DvidDaDev"
-  icon = "🐦"
 
 [[params.social]]
-  name = "github"
+  name = "GitHub↗"
   url = "https://github.com/DavidDevGear"
-  icon = "💻"
 
 [[params.social]]
-  name = "itch.io"
+  name = "Itch.io↗"
   url = "https://sovereigntydigital.itch.io"
-  icon = "🎮"
-
 
 [params.amazon]
   tag = "dviddadev2109-20"
-  region = "us" 
+  region = "us"
+[taxonomies]
+category = "categories"
+tag = "tags"

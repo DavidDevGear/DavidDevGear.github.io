@@ -1,0 +1,111 @@
+/* /* =============================== */
+ *   GLOBAL CLIPPING FIXES
+ * ================================ */
+
+/* Reset and prevent horizontal overflow */
+html, body {  width: 100% !important;
+  max-width: 100% !important;
+  position: relative;
+}
+
+/* Main content container */
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix for all sections */
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container for centered content */
+.content-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 6vw, 120px);
+}
+
+/* Apply container to specific sections */
+.difference,
+.stats,
+.category-grid,
+.profile-block {
+  width: 100%;
+  padding-left: clamp(24px, 6vw, 120px);
+  padding-right: clamp(24px, 6vw, 120px);
+}
+
+/* ===============================
+ *   HERO FIX - NO CLIPPING
+ * ================================ */
+
+
+/* ===============================
+ *   DIFFERENCE SECTION FIXES
+ * ================================ */
+
+.difference {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 140px clamp(24px, 6vw, 120px);
+}
+
+.diff-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Image fallback styling */
+.diff-image {
+  background-color: #1a1a1a; /* Dark fallback if image doesn't load */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Image load error handling */
+.diff-image::after {
+  content: "Image loading...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 14px;
+  display: none;
+}
+
+.diff-image:empty::after {
+  display: block;
+}
+
+/* ===============================
+ *   RESPONSIVE FIXES
+ * ================================ */
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .hero-content {
+    padding: 0 24px;
+  }
+  
+  .difference,
+  .stats {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

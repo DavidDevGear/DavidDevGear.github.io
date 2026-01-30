@@ -1,6 +1,8 @@
 ---
 title: "monitors"
-date: 2024-01-22
+date: 2026-01-22
+image: "/images/categories/monitors.webp"
+badge: "updated"
 ---
 
 # monitor Reviews

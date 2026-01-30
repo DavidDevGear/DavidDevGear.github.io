@@ -3,7 +3,7 @@ title: "Home"
 date: 2024-01-22
 ---
 
-# 🎮 Game Dev Gear Reviews
+# Game Developer Reviews
 
 **Hardware reviews from a game developer's perspective**
 
@@ -32,10 +32,10 @@ Most gaming hardware reviews focus on **gaming performance**. I focus on what ac
 
 ## What Makes This Different?
 
-🎯 **Developer-Focused:** Reviews from a game developer's workflow perspective  
-📊 **Data-Driven:** Based on analysis of 1000+ customer reviews  
-💎 **Budget-Conscious:** Focus on value for indie developers  
-🔍 **Transparent:** Clear methodology and full disclosure  
+**Developer-Focused:** Reviews from a game developer's workflow perspective  
+**Data-Driven:** Based on analysis of 1000+ customer reviews  
+**Budget-Conscious:** Focus on value for indie developers  
+**Transparent:** Clear methodology and full disclosure  
 
 ## Coming Soon
 
@@ -56,4 +56,4 @@ First reviews launching this week! I'll be covering:
 
 I'm David, a solo game developer who has published games on itch.io and other platforms. I specialize in Godot Engine development and review hardware from a **developer's perspective**.
 
-[Learn More About Me →](/about/){.btn}
+[Learn More About Me →](/about/)

@@ -1,0 +1,93 @@
+{{ define "hero" }}
+<section class="hero">
+  <div class="hero-content">
+    <div>
+      <h1>Dev Gear<br>Reviews</h1>
+    </div>
+
+    <div>
+      <p>Professional gaming gear reviews from a developer’s perspective.</p>
+
+      <div class="hero-links">
+        {{ range .Site.Params.social }}
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "main" }}
+
+<section class="difference">
+
+  <div class="diff-item">
+    <div class="diff-image">
+      <img src="/images/para1.webp" alt="Developer-first analysis" loading="lazy">
+    </div>
+    <div class="diff-text">
+      <h3>Developer-first analysis</h3>
+      <p>Focused on real production workflows and long-term usability.</p>
+      <small class="diff-caption">Real-world testing, not benchmarks only.</small>
+    </div>
+  </div>
+
+  <div class="diff-item reverse">
+    <div class="diff-image">
+      <img src="/images/para2.webp" alt="No sponsored bias" loading="lazy">
+    </div>
+    <div class="diff-text">
+      <h3>No sponsored bias</h3>
+      <p>Transparent reviews built from aggregated real user feedback.</p>
+      <small class="diff-caption">Affiliate-supported, opinion-independent.</small>
+    </div>
+  </div>
+
+  <div class="diff-item">
+    <div class="diff-image">
+      <img src="/images/para3.webp" alt="Real dev pipelines" loading="lazy">
+    </div>
+    <div class="diff-text">
+      <h3>Real dev pipelines</h3>
+      <p>Tested against actual development workloads and gaming scenarios.</p>
+      <small class="diff-caption">Game engines, IDEs, multitasking.</small>
+    </div>
+  </div>
+
+  <div class="diff-item reverse">
+    <div class="diff-image">
+      <img src="/images/para4.webp" alt="Long-term durability" loading="lazy">
+    </div>
+    <div class="diff-text">
+      <h3>Long-term durability</h3>
+      <p>Comfort, reliability, and performance over long sessions.</p>
+      <small class="diff-caption">Built for daily, professional use.</small>
+    </div>
+  </div>
+
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <div class="stat-number" data-target="150">0</div>
+    <div class="stat-label">Reviews Analyzed</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number" data-target="35">0</div>
+    <div class="stat-label">Products Compared</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number" data-target="1200">0</div>
+    <div class="stat-label">User Reviews Aggregated</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-number" data-target="7">0</div>
+    <div class="stat-label">Days per Update Cycle</div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,6 +1,16 @@
 {{ define "main" }}
-    <article>
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
+
+<article class="page-content">
+
+  {{ if or (eq .Title "About") (eq .Title "Contact") }}
+  <div class="profile-block">
+    <img src="/images/profile.png" alt="DvidDaDev">
+    <p class="profile-name">DvidDaDev</p>
+  </div>
+  {{ end }}
+
+  {{ .Content }}
+
+</article>
+
 {{ end }}

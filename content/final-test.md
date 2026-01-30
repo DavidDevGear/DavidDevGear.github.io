@@ -6,10 +6,8 @@ date: 2024-01-22
 ## Testing Everything
 
 ### Stats Counter (Should animate when scrolled to)
-{{< stats-fixed >}}
 
 ### Comparison Table (Should have styling)
-{{< compare-simple >}}
 
 ### Colors (Should show with proper theme colors)
 <div class="color-test">

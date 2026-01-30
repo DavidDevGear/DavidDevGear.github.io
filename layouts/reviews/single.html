@@ -1,0 +1,60 @@
+{{ define "main" }}
+<article class="review-post">
+<header class="review-header">
+{{ with .Params.featured_image }}
+  <figure class="review-hero">
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+  </figure>
+{{ end }}
+
+  <h1 class="review-title">{{ .Title }}</h1>
+
+  {{ with .Params.product_name }}
+    <h2 class="review-product">{{ . }} Review</h2>
+  {{ end }}
+
+  <div class="review-meta">
+    {{ if .Params.rating }}
+      <span>⭐ {{ .Params.rating }}/5</span>
+    {{ end }}
+    {{ if .Params.price_range }}
+      <span>· {{ .Params.price_range }}</span>
+    {{ end }}
+  </div>
+
+    {{ if .Params.categories }}
+    <div class="categories">
+      {{ range .Params.categories }}
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="category-tag">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+{{ if .Params.amazon_link }}
+  <div class="amazon-cta">
+<a href="{{ .Params.amazon_link }}">
+
+       class="btn-amazon" target="_blank" rel="nofollow sponsored">
+      🛒 Check Price on Amazon
+    </a>
+    <small>Price: {{ .Params.price_range }}</small>
+  </div>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.tags }}
+  <footer class="post-footer">
+    <div class="tags">
+      <strong>Tags:</strong>
+      {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      {{ end }}
+    </div>
+  </footer>
+  {{ end }}
+</article>
+{{ end }}

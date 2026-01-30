@@ -1,0 +1,95 @@
+{{ define "main" }}
+
+<!-- =========================
+     CATEGORY HERO
+========================= -->
+<section class="categories-hero">
+  <h1>Categories</h1>
+  <p>Curated hardware and tools tested inside real game development workflows.</p>
+</section>
+
+<!-- =========================
+     CATEGORY GRID
+========================= -->
+<section class="category-grid">
+
+  {{ $categories := slice
+    (dict "title" "Audio" "slug" "audio" "description" "High-end audio gear for gaming and music." "class" "audio")
+    (dict "title" "Ergonomics" "slug" "ergonomics" "description" "Ergonomic setups for long sessions." "class" "ergonomics")
+    (dict "title" "Laptops" "slug" "laptops" "description" "Portable high-performance gaming laptops." "class" "laptops")
+    (dict "title" "Monitors" "slug" "monitors" "description" "Best monitors for color accuracy and refresh rate." "class" "monitors")
+    (dict "title" "Peripherals" "slug" "peripherals" "description" "Keyboards, mice, and other accessories." "class" "peripherals")
+    (dict "title" "Software" "slug" "software" "description" "Tools and software for game dev and streaming." "class" "software")
+  }}
+
+  {{ range $categories }}
+    <a href="{{ "/categories/" | relURL }}{{ .slug }}/#reviews"
+       class="category-card {{ .class }}">
+      <h3>{{ .title }}</h3>
+      <p>{{ .description }}</p>
+      <span class="category-cta">View reviews →</span>
+    </a>
+  {{ end }}
+
+</section>
+
+<!-- =========================
+     REVIEWS GRID
+========================= -->
+<section id="reviews" class="reviews-list">
+
+  {{ $currentCategory := .Title }}
+  {{ if .Pages }}
+    {{ range .Pages }}
+      <article class="review-card">
+
+        <div class="review-head">
+          <h2 class="review-title">{{ .Title }}</h2>
+          {{ with .Params.product_name }}
+            <div class="review-subtitle">{{ . }} Review</div>
+          {{ end }}
+        </div>
+
+        <div class="review-body">
+
+          {{ with .Params.featured_image }}
+          <div class="review-image">
+            <a href="{{ $.RelPermalink }}">
+              <img src="{{ . }}" alt="{{ $.Title }}">
+            </a>
+          </div>
+          {{ end }}
+
+          <div class="review-excerpt">
+            <p>{{ .Summary }}</p>
+            <a href="{{ .RelPermalink }}" class="category-cta">
+              Read full review →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+    {{ end }}
+  {{ else }}
+    <p>No reviews found in this category yet.</p>
+  {{ end }}
+
+</section>
+
+<!-- =========================
+     SMOOTH SCROLL SCRIPT
+========================= -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Only scroll if hash exists in URL
+  if (window.location.hash === '#reviews') {
+    const reviewsSection = document.getElementById('reviews');
+    if (reviewsSection) {
+      reviewsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+</script>
+
+{{ end }}

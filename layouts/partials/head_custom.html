@@ -1,0 +1,43 @@
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+
+<!-- Inter font from Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Disable all theme switching -->
+<style>
+  /* Force dark mode and remove all theme toggles */
+  html, body {
+    color-scheme: dark !important;
+  }
+  
+  /* Remove PaperMod theme toggle if it exists */
+  .theme-toggle,
+  #theme-toggle,
+  [id*="theme"],
+  [class*="theme-toggle"],
+  [class*="dark-mode"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+  }
+</style>
+
+<script>
+  // Prevent theme switching
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('theme', 'dark');
+  
+  // Override any theme switching functions
+  if (typeof window.switchTheme === 'function') {
+    window.switchTheme = function() { return 'dark'; };
+  }
+  if (typeof window.setTheme === 'function') {
+    window.setTheme = function() { return 'dark'; };
+  }
+</script>

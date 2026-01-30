@@ -1,6 +1,8 @@
 ---
 title: "laptops"
-date: 2024-01-22
+date: 2026-01-22
+image: "/images/categories/laptops.webp"
+badge: "updated"
 ---
 
 # laptop Reviews

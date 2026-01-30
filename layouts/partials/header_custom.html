@@ -1,0 +1,17 @@
+<header class="navbar">
+  <div class="navbar-content">
+    <a href="{{ .Site.BaseURL }}" class="navbar-logo">
+      {{ .Site.Title }}
+    </a>
+    
+    <nav>
+      <ul class="navbar-menu">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="navbar-spacer"></div>

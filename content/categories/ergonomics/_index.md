@@ -1,6 +1,8 @@
 ---
 title: "ergonomics"
-date: 2024-01-22
+date: 2026-01-22
+image: "/images/categories/ergonomics.webp"
+badge: "updated"
 ---
 
 # ergonomics Reviews

@@ -1,0 +1,21 @@
+<a href="{{ .RelPermalink }}" class="category-card reveal">
+
+  {{ with .Params.badge }}
+    <span class="category-badge {{ . }}">{{ upper . }}</span>
+  {{ end }}
+
+  {{ with .Params.image }}
+<div class="category-image"
+     style="background-image: url('/images/placeholder.png')"
+     data-bg="{{ .Params.image }}"></div>
+
+  {{ end }}
+
+  <h3>{{ .Title }}</h3>
+
+  {{ with .Params.description }}
+    <p>{{ . }}</p>
+  {{ end }}
+
+  <span class="category-cta">View reviews →</span>
+</a>

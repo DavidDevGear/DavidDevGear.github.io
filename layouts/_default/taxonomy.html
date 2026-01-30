@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+<section class="categories-hero">
+  <h1>{{ .Title }}</h1>
+  <p>Reviews filed under {{ .Title }}.</p>
+</section>
+
+<section id = "reviews" class="reviews-list">
+
+  {{ if .Pages }}
+    {{ range .Pages }}
+      <article class="review-card">
+
+        <div class="review-head">
+          <h2 class="review-title">{{ .Title }}</h2>
+
+          {{ with .Params.product_name }}
+            <div class="review-subtitle">{{ . }} Review</div>
+          {{ end }}
+        </div>
+
+        <div class="review-body">
+
+          {{ with .Params.featured_image }}
+          <div class="review-image">
+            <a href="{{ $.RelPermalink }}">
+              <img src="{{ . }}" alt="{{ $.Title }}">
+            </a>
+          </div>
+          {{ end }}
+
+          <div class="review-excerpt">
+            <p>{{ .Summary }}</p>
+            <a href="{{ .RelPermalink }}" class="category-cta">
+              Read full review →
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+    {{ end }}
+  {{ else }}
+    <p>No reviews found in this category yet.</p>
+  {{ end }}
+
+</section>
+
+{{ end }}
