@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dev Gear Reviews</title>
-    <link>http://localhost:44897/categories/</link>
+    <link>http://localhost:42681/categories/</link>
     <description>Recent content in Categories on Dev Gear Reviews</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:44897/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:42681/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>audio</title>
-      <link>http://localhost:44897/categories/audio/</link>
+      <link>http://localhost:42681/categories/audio/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/audio/</guid>
+      <guid>http://localhost:42681/categories/audio/</guid>
       <description>&lt;h1 id=&#34;audio-reviews&#34;&gt;audio Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - audio reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ergonomics</title>
-      <link>http://localhost:44897/categories/ergonomics/</link>
+      <link>http://localhost:42681/categories/ergonomics/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/ergonomics/</guid>
+      <guid>http://localhost:42681/categories/ergonomics/</guid>
       <description>&lt;h1 id=&#34;ergonomics-reviews&#34;&gt;ergonomics Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - ergonomics reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>laptops</title>
-      <link>http://localhost:44897/categories/laptops/</link>
+      <link>http://localhost:42681/categories/laptops/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/laptops/</guid>
+      <guid>http://localhost:42681/categories/laptops/</guid>
       <description>&lt;h1 id=&#34;laptop-reviews&#34;&gt;laptop Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - laptop reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>monitors</title>
-      <link>http://localhost:44897/categories/monitors/</link>
+      <link>http://localhost:42681/categories/monitors/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/monitors/</guid>
+      <guid>http://localhost:42681/categories/monitors/</guid>
       <description>&lt;h1 id=&#34;monitor-reviews&#34;&gt;monitor Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - monitor reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>peripherals</title>
-      <link>http://localhost:44897/categories/peripherals/</link>
+      <link>http://localhost:42681/categories/peripherals/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/peripherals/</guid>
+      <guid>http://localhost:42681/categories/peripherals/</guid>
       <description>&lt;h1 id=&#34;peripherals-reviews&#34;&gt;peripherals Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - peripherals reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>software</title>
-      <link>http://localhost:44897/categories/software/</link>
+      <link>http://localhost:42681/categories/software/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/software/</guid>
+      <guid>http://localhost:42681/categories/software/</guid>
       <description>&lt;h1 id=&#34;software-reviews&#34;&gt;software Reviews&lt;/h1&gt;&#xA;&lt;p&gt;Coming soon - software reviews for game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gaming Mice</title>
-      <link>http://localhost:44897/categories/mice/</link>
+      <link>http://localhost:42681/categories/mice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:44897/categories/mice/</guid>
+      <guid>http://localhost:42681/categories/mice/</guid>
       <description></description>
     </item>
   </channel>

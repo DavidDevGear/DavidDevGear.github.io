@@ -22,12 +22,22 @@ html, body {
   {{ end }}
 </title>
 
-{{ with .Description }}
-  <meta name="description" content="{{ . }}">
-{{ else }}
-  {{ with .Site.Params.description }}
-    <meta name="description" content="{{ . }}">
+{{ $desc := "" }}
+
+{{ if .IsPage }}
+  {{ with .Params.description }}
+    {{ $desc = . }}
   {{ end }}
+{{ end }}
+
+{{ if not $desc }}
+  {{ with .Site.Params.description }}
+    {{ $desc = . }}
+  {{ end }}
+{{ end }}
+
+{{ if $desc }}
+<meta name="description" content="{{ $desc }}">
 {{ end }}
 {{ partial "head.html" . }}
 <!-- Fonts -->
