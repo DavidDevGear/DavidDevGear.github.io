@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on Dev Gear Reviews</title>
-    <link>https://DavidDevGear.github.io/reviews/</link>
+    <link>http://localhost:43999/reviews/</link>
     <description>Recent content in Reviews on Dev Gear Reviews</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://DavidDevGear.github.io/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:43999/reviews/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Budget Audio King</title>
-      <link>https://DavidDevGear.github.io/reviews/kz-zsn-pro-x/</link>
+      <link>http://localhost:43999/reviews/kz-zsn-pro-x/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/kz-zsn-pro-x/</guid>
+      <guid>http://localhost:43999/reviews/kz-zsn-pro-x/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;KZ ZSN Pro X&lt;/strong&gt; has built a reputation as one of the best &lt;strong&gt;budget IEMs&lt;/strong&gt; on Amazon. Drawing from thousands of user reviews and audio forums, this earphone consistently stands out for sound quality that far exceeds its price.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;sound-quality&#34;&gt;Sound Quality&lt;/h2&gt;&#xA;&lt;p&gt;Based on aggregated reviews:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bass:&lt;/strong&gt; Punchy and energetic, slightly boosted&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Mids:&lt;/strong&gt; Clear vocals, good separation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Treble:&lt;/strong&gt; Bright and detailed, can be sharp at high volumes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;p&gt;For gaming and casual listening, positional audio and clarity are praised, especially considering the price.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Custom Mechanical Keyboard</title>
-      <link>https://DavidDevGear.github.io/reviews/keychron-k10-pro/</link>
+      <link>http://localhost:43999/reviews/keychron-k10-pro/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/keychron-k10-pro/</guid>
+      <guid>http://localhost:43999/reviews/keychron-k10-pro/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Keychron K10 Pro&lt;/strong&gt; is a full-size mechanical keyboard known for its &lt;strong&gt;hot-swappable switches, QMK/VIA programmability, and multi-device support&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hot-swappable switch support — swap switches without soldering&lt;/li&gt;&#xA;&lt;li&gt;Bluetooth + wired modes&lt;/li&gt;&#xA;&lt;li&gt;QMK/VIA customizable layouts&lt;/li&gt;&#xA;&lt;li&gt;1000 Hz polling rate and responsive typing feel&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;drawback&#34;&gt;Drawback&lt;/h2&gt;&#xA;&lt;p&gt;Some community feedback suggests &lt;strong&gt;occasional quality control issues and customer support limitations&lt;/strong&gt;, common in affordable custom keyboards.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;verdict&#34;&gt;Verdict&lt;/h2&gt;&#xA;&lt;p&gt;Excellent for development and gaming workflows if you value &lt;strong&gt;programmability and typing feel&lt;/strong&gt;, but expect to manage minor quirks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The G14 vs The 5i</title>
-      <link>https://DavidDevGear.github.io/reviews/zephyrus-g14-vs-legion-5i/</link>
+      <link>http://localhost:43999/reviews/zephyrus-g14-vs-legion-5i/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/zephyrus-g14-vs-legion-5i/</guid>
+      <guid>http://localhost:43999/reviews/zephyrus-g14-vs-legion-5i/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Choosing between the &lt;strong&gt;ASUS ROG Zephyrus G14&lt;/strong&gt; and the &lt;strong&gt;Lenovo Legion 5i (Gen 10)&lt;/strong&gt; comes down to how you prioritize portability, performance under real workloads, and thermal consistency. Both are widely available on Amazon and consistently praised in professional reviews and user feedback.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;build-quality--design&#34;&gt;Build Quality &amp;amp; Design&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;ASUS ROG Zephyrus G14&lt;/strong&gt;&lt;br&gt;&#xA;Users and reviewers highlight its &lt;strong&gt;compact build, solid magnesium alloy chassis, and surprisingly powerful internals&lt;/strong&gt; for a 14″ gaming laptop. Battery life is strong relative to raw performance, though cooling can be noticeable under heavy loads.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sweet Spot 1440p Display</title>
-      <link>https://DavidDevGear.github.io/reviews/lg-ultragear-27-review/</link>
+      <link>http://localhost:43999/reviews/lg-ultragear-27-review/</link>
       <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/lg-ultragear-27-review/</guid>
+      <guid>http://localhost:43999/reviews/lg-ultragear-27-review/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;LG UltraGear 27&amp;quot;&lt;/strong&gt; ( 27GL850-B / 27GP850-B series) is a well-rounded 1440p gaming monitor with &lt;strong&gt;excellent motion performance and vivid color quality&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;&#xA;&lt;p&gt;Users and experts consistently praise its &lt;strong&gt;165 Hz refresh rate&lt;/strong&gt; and &lt;strong&gt;1ms response times&lt;/strong&gt;, providing smooth gameplay and low input lag — valuable for both competitive gamers and creators.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;pros&#34;&gt;Pros&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sharp QHD resolution and vibrant Nano IPS panel&lt;/li&gt;&#xA;&lt;li&gt;Great motion clarity and low lag&lt;/li&gt;&#xA;&lt;li&gt;G-SYNC / FreeSync support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;cons&#34;&gt;Cons&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HDR is basic&lt;/li&gt;&#xA;&lt;li&gt;Contrast and blacks not the deepest&lt;/li&gt;&#xA;&lt;li&gt;Stand may feel stiff to adjust&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;br&gt;&#xA;&lt;h3 id=&#34;who-its-for&#34;&gt;Who It’s For&lt;/h3&gt;&#xA;&lt;p&gt;Gamers who want a &lt;strong&gt;fast, versatile 27&amp;quot; monitor&lt;/strong&gt; that can handle shooters, RPGs, and daily productivity — all without huge cost.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Classic Gaming Mouse</title>
-      <link>https://DavidDevGear.github.io/reviews/logitech-g502-hero/</link>
+      <link>http://localhost:43999/reviews/logitech-g502-hero/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/logitech-g502-hero/</guid>
+      <guid>http://localhost:43999/reviews/logitech-g502-hero/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Logitech G502 HERO&lt;/strong&gt; is one of the most popular wired gaming mice of the last decade, known for its precision sensor, programmability, and ergonomic shape.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;design--ergonomics&#34;&gt;Design &amp;amp; Ergonomics&lt;/h2&gt;&#xA;&lt;p&gt;It’s built for &lt;strong&gt;right-handed users&lt;/strong&gt;, with a thumb rest and comfortable grip, making it suitable for long sessions — whether gaming or designing. The adjustable weights let you customize the feel for your hand and playstyle.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;&#xA;&lt;p&gt;The next-generation &lt;strong&gt;HERO sensor&lt;/strong&gt; delivers up to 25,600 DPI tracking with minimal smoothing or filtering, ensuring precise and responsive input — ideal for competitive gaming.&lt;/p&gt;</description>
     </item>
   </channel>

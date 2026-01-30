@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>laptops on Dev Gear Reviews</title>
-    <link>https://DavidDevGear.github.io/categories/laptops/</link>
+    <link>http://localhost:43999/categories/laptops/</link>
     <description>Recent content in laptops on Dev Gear Reviews</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://DavidDevGear.github.io/categories/laptops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:43999/categories/laptops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The G14 vs The 5i</title>
-      <link>https://DavidDevGear.github.io/reviews/zephyrus-g14-vs-legion-5i/</link>
+      <link>http://localhost:43999/reviews/zephyrus-g14-vs-legion-5i/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://DavidDevGear.github.io/reviews/zephyrus-g14-vs-legion-5i/</guid>
+      <guid>http://localhost:43999/reviews/zephyrus-g14-vs-legion-5i/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Choosing between the &lt;strong&gt;ASUS ROG Zephyrus G14&lt;/strong&gt; and the &lt;strong&gt;Lenovo Legion 5i (Gen 10)&lt;/strong&gt; comes down to how you prioritize portability, performance under real workloads, and thermal consistency. Both are widely available on Amazon and consistently praised in professional reviews and user feedback.&lt;/p&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;build-quality--design&#34;&gt;Build Quality &amp;amp; Design&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;ASUS ROG Zephyrus G14&lt;/strong&gt;&lt;br&gt;&#xA;Users and reviewers highlight its &lt;strong&gt;compact build, solid magnesium alloy chassis, and surprisingly powerful internals&lt;/strong&gt; for a 14″ gaming laptop. Battery life is strong relative to raw performance, though cooling can be noticeable under heavy loads.&lt;/p&gt;</description>
     </item>
   </channel>
